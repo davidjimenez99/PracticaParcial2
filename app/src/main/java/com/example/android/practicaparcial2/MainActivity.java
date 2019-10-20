@@ -507,7 +507,13 @@ public class MainActivity extends AppCompatActivity {
 
         //String tag=dado1.getTag().toString();
         //System.out.println(tag.getClass().getName());
-        
+
+        /*System.out.println("dado1: "+dado1.getTag().toString());
+        System.out.println("dado2: "+dado2.getTag().toString());
+        System.out.println("dado3: "+dado3.getTag().toString());
+        System.out.println("dado4: "+dado4.getTag().toString());
+        System.out.println("dado5: "+dado5.getTag().toString());*/
+
         result.putExtra("dado1",dado1.getTag().toString());
         result.putExtra("dado2",dado2.getTag().toString());
         result.putExtra("dado3",dado3.getTag().toString());
