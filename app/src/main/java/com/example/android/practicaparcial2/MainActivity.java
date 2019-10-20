@@ -184,7 +184,13 @@ public class MainActivity extends AppCompatActivity {
                                     dado5.setTag(6);
                                     break;
                             }
-                            //result.putExtr
+
+                            result.putExtra("dado1",dado1.getTag().toString());
+                            result.putExtra("dado2",dado2.getTag().toString());
+                            result.putExtra("dado3",dado3.getTag().toString());
+                            result.putExtra("dado4",dado4.getTag().toString());
+                            result.putExtra("dado5",dado5.getTag().toString());
+
                             startActivity(result);
                             dialog.cancel();
                         }
@@ -499,12 +505,18 @@ public class MainActivity extends AppCompatActivity {
         }
         Intent result = new Intent(this, Resultados.class);
 
-        String tag=dado1.getTag().toString();
-        System.out.println(tag.getClass().getName());
+        //String tag=dado1.getTag().toString();
+        //System.out.println(tag.getClass().getName());
         
-        //result.putExtr
-        //startActivity(result);
+        result.putExtra("dado1",dado1.getTag().toString());
+        result.putExtra("dado2",dado2.getTag().toString());
+        result.putExtra("dado3",dado3.getTag().toString());
+        result.putExtra("dado4",dado4.getTag().toString());
+        result.putExtra("dado5",dado5.getTag().toString());
+
+        startActivity(result);
     }
+
 
 
 }
