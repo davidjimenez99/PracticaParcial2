@@ -14,6 +14,7 @@ public class Resultados extends AppCompatActivity {
     int punt3=0;
     int punt4=0;
     int punt5=0;
+    int punt6=0;
 
 
     @Override
@@ -51,6 +52,9 @@ public class Resultados extends AppCompatActivity {
                 case 5:
                     punt5 += 5;
                     break;
+                case 6:
+                    punt6+=6;
+                    break;
             }
         }
 
@@ -59,6 +63,7 @@ public class Resultados extends AppCompatActivity {
         TextView t3 = findViewById(R.id.tv3);
         TextView t4 = findViewById(R.id.tv4);
         TextView t5 = findViewById(R.id.tv5);
+        TextView t6 = findViewById(R.id.tv6);
         TextView tot = findViewById(R.id.tPuntosTotales);
 
         t1.setText(Integer.toString(punt1));
@@ -66,11 +71,12 @@ public class Resultados extends AppCompatActivity {
         t3.setText(Integer.toString(punt3));
         t4.setText(Integer.toString(punt4));
         t5.setText(Integer.toString(punt5));
-        int puntosTotales = punt1 + punt2 + punt3 + punt4 + punt5;
+        t6.setText(Integer.toString(punt6));
+        int puntosTotales = punt1 + punt2 + punt3 + punt4 + punt5 + punt6;
 
         boolean igual5, igual4, igual3;
         //CHECAR SI HAY 3, 4 O 5 IGUALES Y SUMAR PUNTOS
-        if (dados[0] == dados[1] || dados[1] == dados[2] || dados[2] == dados[3] || dados[3] == dados[4] || dados[4] == dados[5]){//CHECA SI LOS 5 SON IGUALES
+        if (dados[0] == dados[1] && dados[1] == dados[2] && dados[2] == dados[3] && dados[3] == dados[4]){//CHECA SI LOS 5 SON IGUALES
             puntosTotales += 40;
             igual5=true;
         }
